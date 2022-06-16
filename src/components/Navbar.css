@@ -1,0 +1,27 @@
+.navbar {
+    background: #000;
+    color: #fff;
+   
+    
+}
+.navbarLink {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-evenly;
+   padding: 20px;
+   
+}
+
+.logo{
+  float: letf;
+  margin-right: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+img{
+  cursor: pointer;
+}

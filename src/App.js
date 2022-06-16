@@ -1,13 +1,12 @@
-import logo from './img/logo.png';
 import './App.css';
+import Welcome from './components/Welcome';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Punto y Aparte Muebles</h1>
-      </header>
+      <Navbar />
+      <Welcome />
     </div>
   );
 }
