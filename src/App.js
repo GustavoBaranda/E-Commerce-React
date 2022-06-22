@@ -1,13 +1,12 @@
-import './App.css';
-import Welcome from './components/Welcome';
 import Navbar from './components/Navbar';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
-    <div className="App">
+   <>
       <Navbar />
-      <Welcome />
-    </div>
+      <ItemListContainer greetings="Bienvenidos a WildBurger" />
+   </>
   );
 }
 

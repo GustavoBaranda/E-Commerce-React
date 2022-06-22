@@ -1,0 +1,8 @@
+.ItemListContainer{
+    padding-top: 20px;
+    text-align: center;
+    margin: 100px auto;
+    font-family: sans-serif;
+    font-size: 50px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}

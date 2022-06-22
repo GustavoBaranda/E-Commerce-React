@@ -1,32 +1,52 @@
-import './Navbar.css';
-import logo from './logo.png';
+import React from "react";
+import { GiHamburger } from "react-icons/gi";
+import { FaCartPlus } from "react-icons/fa";
+import {
+    Container,
+    Wrapper,
+    LogoContainer,
+    Menu,
+    MenuItem,
+    MenuItemLink} from "./Navbar.elements"
 
-
-function Navbar() {
+const Navbar = () => {
   return (
-    <div className="navbar">
-        <div className="navbarLink">
-            <div className="logo">
-                <img 
-                    href="#"
-                    src={logo} width="70"
-                    height="70"
-                />
-            </div>
-            <a href="#">
-                Home
-            </a>
-            <a href="#">
-                Productos
-            </a>
-            <a href="#">
-                Nosotros
-            </a>
-            <a href="#">
-                Contactanos
-            </a>    
-        </div>
-    </div>
+    <Container>
+        <Wrapper>
+            <LogoContainer href="#">
+                <GiHamburger />
+                <p>WildBurger</p>
+            </LogoContainer>
+            <Menu>
+                <MenuItem>
+                    <MenuItemLink href="#">
+                        INICIO
+                    </MenuItemLink>
+                </MenuItem>
+                <MenuItem>    
+                    <MenuItemLink href="#">
+                        MENU
+                    </MenuItemLink>
+                </MenuItem>
+                <MenuItem>    
+                    <MenuItemLink href="#">
+                        NOSOTROS
+                    </MenuItemLink>
+                </MenuItem>
+                <MenuItem>    
+                    <MenuItemLink href="#">
+                        CONTACTO   
+                    </MenuItemLink>
+                </MenuItem>
+                <MenuItem>    
+                    <MenuItemLink href="#">
+                        <FaCartPlus />
+                    </MenuItemLink>
+                </MenuItem>
+            </Menu>
+        </Wrapper>    
+    </Container> 
+
   );
 }
 
