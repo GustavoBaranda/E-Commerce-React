@@ -6,7 +6,7 @@ function App() {
    <>
       <Navbar />
       <ItemListContainer greetings="Bienvenidos a WildBurger" />
-   </>
+    </>
   );
 }
 

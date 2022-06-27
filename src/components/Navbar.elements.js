@@ -9,18 +9,20 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
     width: 100%;
-    max-width: 1300px;
+    max-width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
+    width: 100%;
+    heigth: 70px;
 `;
 
 export const LogoContainer = styled.div`
     margin-left: 0.5rem;
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-family: sans-serif;
     cursor:pointer;
     text-decoration:none;
@@ -63,13 +65,14 @@ export const MenuItemLink = styled.a`
     cursor: pointer;
     text-decoration:none;
     heigth: 100%;
-    padding: 0.5rem 2.5rem;
+    padding: 0.5rem 2rem;
     color: #e07924;
     font-family: sans-serif;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weigth: 300:
     cursor: pointer;
     transsition: 0.5s all ease;
+    font-size: 1.6rem;
 
     &:hover{
         color: #fff;

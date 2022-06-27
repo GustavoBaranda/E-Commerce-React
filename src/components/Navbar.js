@@ -1,6 +1,6 @@
 import React from "react";
 import { GiHamburger } from "react-icons/gi";
-import { FaCartPlus } from "react-icons/fa";
+import Widget from "./Widget";
 import {
     Container,
     Wrapper,
@@ -25,8 +25,18 @@ const Navbar = () => {
                 </MenuItem>
                 <MenuItem>    
                     <MenuItemLink href="#">
-                        MENU
-                    </MenuItemLink>
+                        MENU                                      
+                    </MenuItemLink>                
+                </MenuItem>
+                <MenuItem>    
+                    <MenuItemLink href="#">
+                        BEBIDAS                                      
+                    </MenuItemLink>                
+                </MenuItem>
+                <MenuItem>    
+                    <MenuItemLink href="#">
+                        POSTRES                                      
+                    </MenuItemLink>                
                 </MenuItem>
                 <MenuItem>    
                     <MenuItemLink href="#">
@@ -35,12 +45,7 @@ const Navbar = () => {
                 </MenuItem>
                 <MenuItem>    
                     <MenuItemLink href="#">
-                        CONTACTO   
-                    </MenuItemLink>
-                </MenuItem>
-                <MenuItem>    
-                    <MenuItemLink href="#">
-                        <FaCartPlus />
+                        <Widget />
                     </MenuItemLink>
                 </MenuItem>
             </Menu>
