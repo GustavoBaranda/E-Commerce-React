@@ -5,7 +5,7 @@ import img from './mcNifica.png';
 
 
 function ItemCount ( { stock } ){
-    const [num, setNum] = useState( 0 );
+    const [num, setNum] = useState( 1 );
 
     useEffect(() => {
       if( num == stock - 2 ){
