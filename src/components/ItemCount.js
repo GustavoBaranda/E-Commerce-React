@@ -1,25 +1,12 @@
-import {useState, useEffect} from "react";
-import Swal from 'sweetalert2';
+import {useState} from "react";
 import './ItemCount.css';
-import img from './mcNifica.png';
 
-
-function ItemCount ( { stock } ){
+function ItemCount ( { stock, id } ){
     const [num, setNum] = useState( 1 );
-
-    useEffect(() => {
-      if( num == stock - 2 ){
-        Swal.fire( `Quedan pocas unidades!` )
-      }
-    
-    }, [ num ])
 
     const sumar = () => {
         if( num < stock ){
             setNum( num + 1 );
-        }
-        else{
-            Swal.fire( `El stock disponibles es de ${ stock } unidades!` )
         }
     }
 
@@ -28,39 +15,22 @@ function ItemCount ( { stock } ){
             setNum( num - 1 );
         }
     }
-
-    const reiniciar = () => {
-        setNum( 0 )
-    }
-
-    const agregar = () => {
-        console.log( num )
-    }
-
+    
     return (
         <>
-            <div className="contadorContainer">
-                <div className="cardContador">
-                    <div className="img">
-                        <img src={ img } />
-                    </div>
-                    <div className="combo">
-                        <h1>Combo cuarto de libra </h1>
-                    </div>
-                    <div className="contador">
-                        <button className="sumar" onClick={ sumar }>+</button>
-                        <h3 className="stock">{ num }</h3>
-                        <button className="resta" onClick={ resta }>-</button>
-                    </div>
-                    <div className="stock-disponibles">
-                        <p>{ stock > 1 ? `${ stock } unidades disponibles` : `${ stock } unidad disponible` }</p>
-                    </div>
-                    <div className="botones">                     
-                        <button className="reiniciar" onClick={ reiniciar }>Reiniciar</button>
-                        <button className="agregarAlCarrito" onClick={ agregar }>Agregar</button>
-                    </div>
+            <div className="contadorContenedor">
+            <div className="stock-disponibles">
+                    <p>{ stock > 1 ? `${ stock } unidades disponibles` : `${ stock } unidad disponible` }</p>
                 </div>
-            </div>
+                <div className="contador">
+                    <button className="sumar" onClick={ sumar }>+</button>
+                    <h3 className="stock">{ num }</h3>
+                    <button className="resta" onClick={ resta }>-</button>
+                </div>
+                <div className="boton">                     
+                    <button className="agregarAlCarrito" /*onClick={ id }*/>Agregar Menu</button>
+                </div>
+            </div>    
         </>
     )
 }
