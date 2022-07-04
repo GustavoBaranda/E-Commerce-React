@@ -8,13 +8,11 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-    width: 100%;
-    max-width: 90%;
+    max-width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
-    width: 100%;
     heigth: 70px;
 `;
 

@@ -1,34 +1,31 @@
-import {useState} from "react";
+import { useState } from "react";
 import './ItemCount.css';
 
-function ItemCount ( { stock, id } ){
-    const [num, setNum] = useState( 1 );
+function ItemCount ( {initial, stock, onAdd } ){
+    const [num, setNum] = useState( initial );
 
     const sumar = () => {
-        if( num < stock ){
-            setNum( num + 1 );
-        }
+      setNum( num + 1 );
     }
 
     const resta = () => {
-        if( num > 0 ){
-            setNum( num - 1 );
-        }
+        setNum( num - 1 );
+        
     }
     
     return (
         <>
             <div className="contadorContenedor">
-            <div className="stock-disponibles">
+                <div className="stock-disponibles">
                     <p>{ stock > 1 ? `${ stock } unidades disponibles` : `${ stock } unidad disponible` }</p>
                 </div>
                 <div className="contador">
-                    <button className="sumar" onClick={ sumar }>+</button>
+                    <button className="sumar" disabled={ num >= stock } onClick={ sumar }>+</button>
                     <h3 className="stock">{ num }</h3>
-                    <button className="resta" onClick={ resta }>-</button>
+                    <button className="resta" disabled={ num <= 1 } onClick={ resta }>-</button>
                 </div>
                 <div className="boton">                     
-                    <button className="agregarAlCarrito" /*onClick={ id }*/>Agregar Menu</button>
+                    <button className="agregarAlCarrito" disabled={ stock <= 0 } onClick={() => onAdd(num) }>Agregar Menu</button>
                 </div>
             </div>    
         </>

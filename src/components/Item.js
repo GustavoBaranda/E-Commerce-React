@@ -1,7 +1,9 @@
 import React from 'react';
-import './Items.css';
-import ItemCount from './ItemCount'
-function Items({nombre, imagen, precio, id, stock}){
+import './Item.css';
+function Item({ 
+    nombre,
+    precio,
+    imagen}){
     
     return (
         <>
@@ -16,12 +18,9 @@ function Items({nombre, imagen, precio, id, stock}){
                     <div>
                         <p className="precio">$ { precio }</p>
                     </div>
-                    <div>
-                        <ItemCount stock={ stock } id={ id } />
-                    </div>
                 </div>
             </div>
         </>
     )
 }
-export default Items;
+export default Item;

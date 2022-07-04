@@ -1,41 +1,34 @@
 import './ItemListContainer.css';
-import Itemslist from './ItemsList';
+import Itemlist from './ItemList';
 import React, { useEffect, useState } from 'react';
-import {cartaMenus} from '../components/cartaMenus'
+import {data} from './data/Data'
 
-function ItemListContainer({ greetings }) {
+function ItemListContainer ({ greetings }) {
 
-  const [menus, setMenus] = useState([])
+  const [items, setItems] = useState([]);
 
-  const getMenus = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        cartaMenus.length > 0 ?
-          resolve(cartaMenus)
-          :
-          reject("No hay datos")
-      }, 2000);
-    }
-    )
-  }
+    useEffect(() =>{
+      const getItems = new Promise((resolve) => {
 
-  useEffect(() => {
-  getMenus()
-      .then(res => setMenus(res))
-      .catch(err => console.log(err))
-  }, [menus])
+        setTimeout(() =>{
+         resolve(data);
+      }, 1000);
+    });
 
-  console.log(menus)
-
-  
+    getItems.then((res) => {
+      setItems(res);
+    });
+  }, []);
 
   return (
     <div className="ItemListContainer">
       <h1 className="titulo">{ greetings }</h1>
       <br />
-      <Itemslist cartaMenus={menus} />
+      <Itemlist items={items} />
     </div>
   );
-}
+};
 
-export default ItemListContainer;
+export default ItemListContainer; 
+
+

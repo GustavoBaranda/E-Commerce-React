@@ -1,11 +1,13 @@
-export const  cartaMenus =
+export const  data =
 [
     {
         "id":1,
         "nombre":"Big mac",
         "precio": 860,
         "imagen": "./img/bigMac.png", 
-         "stock": 20
+        "stock": 20,
+        "descripcion": "Quizás sean las dos hamburguesas de carne 100% vacuna con esa salsa especial y queso derretido, el toque de cebolla y la frescura de la lechuga o el crocante del pepino, lo que la hace la hamburguesa más famosa del mundo. Un sabor único.",
+        "categoria": "Combos Hambuerguesas"
     },
     {
         "id":2,

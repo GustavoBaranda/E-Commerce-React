@@ -1,0 +1,62 @@
+.ContainerDetail{
+    padding-top: 20px;
+    text-align: center;
+    margin: 100px auto;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.ItemDetail {
+    max-width: 1300px;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "imgDiv combo combo"
+    "imgDiv descripcion descripcion"
+    "precioDetail descripcion descripcion"
+    "contadorDetail descripcion descripcion";
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid #e07924; 
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.combo{
+    grid-area: combo;
+    margin: 50px 0 0 0;
+    text-align: center;
+}
+
+.descripcion{
+    grid-area: descripcion;
+    font-size: 25px;
+    margin: 80px;
+    text-align: center;
+}
+
+.precioDetail{
+    grid-area: precioDetail;
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+.contadorDetail{
+    grid-area: contadorDetail;
+    text-align: center;
+}
+
+.imgDiv{
+    grid-area: imgDiv;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.imgCombo{
+    width: 100%;
+}
