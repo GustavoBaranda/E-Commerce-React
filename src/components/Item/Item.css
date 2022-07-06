@@ -1,0 +1,58 @@
+.contadorContainer{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.cardContador{
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    padding-top: 50px;
+    width: 450px;
+    height: 400px;
+    border: 1px solid #e07924;
+    border-radius: 15px;
+    color: white;
+    background-color:black;
+    box-shadow: 0 5px 15px #e07924;
+    border: 20px;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.combo{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.stock-disponibles{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.precio {
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+

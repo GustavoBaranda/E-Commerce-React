@@ -1,0 +1,22 @@
+.ItemListContainer{
+    padding-top: 20px;
+    text-align: center;
+    margin: 100px auto;
+    font-family: sans-serif;
+    max-width: 80%;
+   
+}
+
+.titulo{
+    font-size: 100px;
+    margin: auto;
+    margin-bottom: 100px;
+    color: #e07924;
+}
+.cargando{
+    color: #fff;
+    text-align: center;
+    margin-top: 20%;
+    
+}
+

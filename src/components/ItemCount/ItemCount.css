@@ -1,0 +1,72 @@
+.contadorContenedor{
+    width: 100%;
+}
+
+.contador{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+}    
+
+.sumar{
+    background: green;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #e07924; 
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.resta{
+    background: red;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    border: 1px solid #e07924; 
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.stock{
+    font-size: 20px;
+    color: #e07924;
+    text-align: center;
+    width: 100px;
+}
+
+
+
+.boton{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin: 20px 10px;
+}    
+
+.agregarAlCarrito{
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5); 
+    color: white;
+    background-color:rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px #fff;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.stockDisponible{
+    font-size: 18px;
+    padding: 15px;
+}
