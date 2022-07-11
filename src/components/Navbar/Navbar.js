@@ -14,7 +14,7 @@ const Navbar = () => {
                 <Link to="/">
                     <GiHamburger />
                 </Link>
-                <p>Rodolfo Beer&Burger</p>
+                <p>Rodolfo's Beer&Burger</p>
             </div>
             <div className="navegacion">
                 <ul className="Menu">

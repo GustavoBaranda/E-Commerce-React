@@ -2,17 +2,19 @@ import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 import { useState } from 'react';
-import { Link } from 'react-router-dom'
-
-function ItemDetail({imagen, nombre, descripcion, precio, stock}){
+import { Link } from 'react-router-dom';
+import  { useCartContext } from '../../context/Cartcontext';
+function ItemDetail( { imagen, nombre, descripcion, precio, stock, id } ) {
     
-    const [irAlCart, setIrAlCart] = useState(false)
+    const [ goToCart, setGoToCart ] = useState( false );
 
-    const onAdd = (cantidad) => {
-        console.log(`Compraste ${cantidad} ${nombre}`)
-        setIrAlCart(true)
+    const {addItem} = useCartContext();
+
+    const onAdd = ( cantidad ) => {
+        //console.log(`Compraste ${cantidad} ${nombre}`);
+        setGoToCart( true );
+        addItem( { id, nombre, precio, imagen }, cantidad );
     }
-
     return (
         <>
             <div className="ContainerDetail">
@@ -31,7 +33,7 @@ function ItemDetail({imagen, nombre, descripcion, precio, stock}){
                     </div>
                     <div className="contadorDetail">
                         {
-                            irAlCart
+                            goToCart
                             ? <Link className="terminarCompra" to="/Cart">Terminar Compra</Link>
                             : <ItemCount initial={ 1 } stock={ stock } onAdd={ onAdd } />
                         }
