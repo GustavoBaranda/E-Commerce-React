@@ -21,7 +21,7 @@ function ItemDetail({imagen, nombre, descripcion, precio, stock}){
                         <img src={ imagen } alt={ nombre } />
                     </div>
                     <div className="combo">
-                        <h1>{ nombre }</h1>
+                        <h3>{ nombre }</h3>
                     </div>
                     <div className="descripcion">
                         <p>{ descripcion }</p> 
