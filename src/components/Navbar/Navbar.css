@@ -79,7 +79,7 @@
   max-width: 70%;
 }
 
-.active {
+.activeClass {
   color: #fff;
   background-color: #e07924 ;
   transition: 0.5s all ease;

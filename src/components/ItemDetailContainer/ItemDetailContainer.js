@@ -18,21 +18,24 @@ function ItemDetailContainer (){
             }, 500);
         });
 
-        getItems.then((res) => 
-        setMenus(res));
+        getItems.then((res) =>{  
+        setMenus(res);
         setLoading(false);
+        });
     }, [])
 
 
-    return Loading ? 
+    return(  
     <div>
-        <h1>Cargando...</h1>            
-    </div> :
+        {Loading ?
+        <div className="cargando">
+            <h1>Cargando...</h1>
+        </div>  
+        : <ItemDetail {...menu} />}           
+    </div>
     
-    (
-        <>
-          {menu && <ItemDetail {...menu} />}
-        </>
+    
+
     );
 };
 
