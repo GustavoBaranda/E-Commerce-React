@@ -35,7 +35,7 @@ function ItemDetail( { imagen, nombre, descripcion, precio, stock, id } ) {
                         {
                             goToCart
                             ? <div className="bottons">
-                                <Link className="terminarCompra" to="/Cart">Terminar Compra</Link>
+                                <Link className="irAlCarrito" to="/Cart">Ir al carrito</Link>
                                 <Link className="SeguirComparando" to="/">Seguir Comprando</Link>
                             </div>
                             : 
