@@ -19,7 +19,7 @@
   margin-left: 0.5rem;
   display: flex;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5em;
   cursor: pointer;
   text-decoration: none;
 }
@@ -44,7 +44,7 @@
 .Menu {
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   list-style: none;
 }
 
@@ -52,7 +52,7 @@
   height: 100%;
 }
 
-.Link {
+.NavLink, .Link {
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -61,27 +61,72 @@
   padding: 0.5rem 2rem;
   color: #e07924;
   font-family: sans-serif;
-  font-size: 2rem;
   font-weight: 300;
   cursor: pointer;
   transition: 0.5s all ease;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
-.Link:hover {
+.NavLink:hover {
   color: #fff;
   background-color: #e07924;
   transition: 0.5s all ease;
   border-radius: 5px;
 }
 
-.Widget{
-  max-width: 70%;
+
+
+
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+}
+.nav__toggler {
+  display: none;
+}
+.nav__toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: rgb(204, 204, 204);
+  transition: 0.3s ease-in;
 }
 
-.activeClass {
-  color: #fff;
-  background-color: #e07924 ;
-  transition: 0.5s all ease;
-  border-radius: 5px;
+@media screen and (max-width: 960px) {
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    height: 93vh;
+    width: 50vw;
+    background: rgb(0, 33, 65);
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+  }
+  
+
+}
+/* Active Class */
+.nav__active {
+  transform: translateX(0%);
+}
+
+/* Toggle Icon Animation */
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -5px);
 }

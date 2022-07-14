@@ -1,0 +1,38 @@
+.cartContenedor{
+    display: flex;
+    padding-top: 3%;
+}
+
+.cartItem{
+    margin: 0 auto;
+    display: flex;
+    height: 300px;
+    border-bottom: 1px solid rgba(255,255,255);
+}
+
+.menuCart {
+    width: 300px;
+}
+
+.menuDescripcion {
+    width: 200px;
+    margin: 65px auto;
+}
+
+.menuItem{
+    text-align: left;
+    width: 500px;
+    margin: 65px auto;
+}
+
+.menuDescripcion p, .menuItem p{
+    margin: 2px;
+    font-size: 30px;
+    /*color: #e07924;*/
+}
+
+
+.delete{
+    margin: 100px auto;
+    cursor: pointer;
+}

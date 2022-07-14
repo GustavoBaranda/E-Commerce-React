@@ -1,9 +1,8 @@
 .contadorContainer{
     display: flex;
     justify-content: center;
-    position: relative;
     margin: 0 auto;
-    padding: 50px;
+    padding: 20px;
 }
 
 .cardContador{
@@ -11,7 +10,7 @@
     align-content: center;
     margin: 0 auto;
     padding-top: 50px;
-    width: 400px;
+    width: 350px;
     height: 400px;
     border: 1px solid #e07924;
     border-radius: 15px;
@@ -31,7 +30,7 @@
 .combo{
     text-align: center;
     margin-bottom: 20px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .stock-disponibles{

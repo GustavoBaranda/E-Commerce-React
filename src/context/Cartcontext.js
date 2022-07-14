@@ -8,13 +8,13 @@ const CartProvider = ( { children } ) => {
 
     const [ cart, setCart] = useState( [] );
     
-    const addItem = ( item, cantidad ) => {
+    const addItem = ( item, quantity ) => {
         if( isInCart( item.id ) ){
             setCart( cart.map( menu => {
-            return menu.id === item.id ? { ...menu, cantidad: menu.cantidad + cantidad } : menu 
+            return menu.id === item.id ? { ...menu, quantity: menu.quantity + quantity } : menu 
         } )); 
     } else {
-        setCart( [...cart, { ...item, cantidad: cantidad } ] )
+        setCart( [...cart, { ...item, quantity: quantity } ] )
     }
   };
 
@@ -26,12 +26,19 @@ const CartProvider = ( { children } ) => {
     
     const removeItem = ( id ) => setCart( cart.filter( menu => menu.id !== id ) );
 
+    const totalPrice = () => cart.reduce((prev, act) => prev + act.quantity * act.precio, 0 );
+
+    const totalMenus = () => cart.reduce((acumulador, menuActual) => acumulador + menuActual.quantity, 0 );
+
     return (
         <CartContext.Provider value= { {
             clearCart,
             isInCart,
             removeItem,
-            addItem
+            addItem,
+            totalPrice,
+            totalMenus,
+            cart
         } }>
             { children }
         </CartContext.Provider>

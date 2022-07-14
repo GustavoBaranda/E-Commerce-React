@@ -52,7 +52,7 @@
 
 .imgDiv{
     grid-area: imgDiv;
-    width: 500px;
+    width: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +65,7 @@
 .terminarCompra{
     font-size: 25px;
     text-align: center;
-    width: 100%;
+    max-width: 100%;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.5); 
     color: white;
@@ -74,4 +74,24 @@
     padding: 5px;
     cursor: pointer;
     text-decoration: none;
+}
+
+.SeguirComparando{
+    font-size: 25px;
+    text-align: center;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5); 
+    color: white;
+    background-color:rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px #fff;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bottons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }

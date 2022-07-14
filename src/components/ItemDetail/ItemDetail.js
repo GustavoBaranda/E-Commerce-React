@@ -10,10 +10,10 @@ function ItemDetail( { imagen, nombre, descripcion, precio, stock, id } ) {
 
     const {addItem} = useCartContext();
 
-    const onAdd = ( cantidad ) => {
+    const onAdd = ( quantity ) => {
         //console.log(`Compraste ${cantidad} ${nombre}`);
         setGoToCart( true );
-        addItem( { id, nombre, precio, imagen }, cantidad );
+        addItem( { id, nombre, precio, imagen }, quantity );
     }
     return (
         <>
@@ -34,8 +34,13 @@ function ItemDetail( { imagen, nombre, descripcion, precio, stock, id } ) {
                     <div className="contadorDetail">
                         {
                             goToCart
-                            ? <Link className="terminarCompra" to="/Cart">Terminar Compra</Link>
-                            : <ItemCount initial={ 1 } stock={ stock } onAdd={ onAdd } />
+                            ? <div className="bottons">
+                                <Link className="terminarCompra" to="/Cart">Terminar Compra</Link>
+                                <Link className="SeguirComparando" to="/">Seguir Comprando</Link>
+                            </div>
+                            : 
+                            <ItemCount initial={1} stock={stock} onAdd={onAdd} />
+                            
                         }
                     </div>
                 </div>

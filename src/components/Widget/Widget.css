@@ -1,0 +1,13 @@
+.Widget{
+    max-width: 70%;
+  }
+  
+  .Link svg {
+    fill: #e07924;
+    margin-right: 0.5rem;
+  }
+  
+  .totalItem {
+    color: #e07924;
+  }
+  

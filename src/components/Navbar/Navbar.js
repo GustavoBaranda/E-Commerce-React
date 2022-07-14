@@ -1,9 +1,8 @@
 import React from "react";
 import { GiHamburger } from "react-icons/gi";
 import Widget from "../Widget/Widget";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
-
 
 const Navbar = () => {
   return (
@@ -19,29 +18,31 @@ const Navbar = () => {
             <div className="navegacion">
                 <ul className="Menu">
                     <li className="MenuItem">
-                        <Link className="Link" to="/">
+                        <NavLink className="NavLink" to="/">
                             MENU                                      
-                        </Link>                
-                        <Link className="Link" to="/categoria/hambuerguesas">
+                        </NavLink>                
+                        <NavLink className="NavLink" to="/categoria/hambuerguesas">
                             HAMBURGUESAS                                      
-                        </Link>                
-                        <Link className="Link" to="/categoria/acompanamiento">
+                        </NavLink>                
+                        <NavLink className="NavLink" to="/categoria/acompanamiento">
                             ACOMPAÑAMIENTO                                      
-                        </Link>                
-                        <Link className="Link" to="/categoria/bebidas">
+                        </NavLink>                
+                        <NavLink className="NavLink" to="/categoria/bebidas">
                             BEBIDAS                                      
-                        </Link>                
-                        <Link className="Link" to="/categoria/postres">
+                        </NavLink>                
+                        <NavLink className="NavLink" to="/categoria/postres">
                             POSTRES                                      
-                        </Link>                
+                        </NavLink>                
                     </li>
                 </ul>
+                <div className="Widget">
+                    <Link className="Link" to="/cart">
+                        <Widget />
+                    </Link>
+                </div>
             </div>
-            <div className="Widget">
-                <Link className="Link" to="/cart">
-                    <Widget />
-                </Link>
-            </div>
+            
+            
         </div>    
     </div> 
 
