@@ -18,7 +18,7 @@ const CartProvider = ( { children } ) => {
     }
   };
 
-  //console.log( cart )
+  console.log("CARRITO", cart )
 
     const clearCart = () => setCart( [] );
     

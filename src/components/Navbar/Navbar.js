@@ -21,7 +21,7 @@ const Navbar = () => {
                         <NavLink className="NavLink" to="/">
                             MENU                                      
                         </NavLink>                
-                        <NavLink className="NavLink" to="/categoria/hambuerguesas">
+                        <NavLink className="NavLink" to="/categoria/hamburguesas">
                             HAMBURGUESAS                                      
                         </NavLink>                
                         <NavLink className="NavLink" to="/categoria/acompanamiento">

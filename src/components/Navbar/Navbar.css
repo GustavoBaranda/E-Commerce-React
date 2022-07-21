@@ -25,7 +25,7 @@
 }
 
 .LogoContainer p:nth-child(2) {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: #e07924;
 }
@@ -64,7 +64,7 @@
   font-weight: 300;
   cursor: pointer;
   transition: 0.5s all ease;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .NavLink:hover {

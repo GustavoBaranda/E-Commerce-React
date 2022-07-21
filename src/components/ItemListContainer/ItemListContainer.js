@@ -1,8 +1,8 @@
 import './ItemListContainer.css';
 import Itemlist from '../ItemList/ItemList';
 import React, { useEffect, useState } from 'react';
-import {data} from '../data/Data'
 import {useParams} from 'react-router-dom'
+import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore';
 
 function ItemListContainer ({ greetings }) {
 
@@ -13,19 +13,18 @@ function ItemListContainer ({ greetings }) {
   const {idCategoria} = useParams();
  
     useEffect(() =>{
-      setLoading(true);
-      const getItems = new Promise((resolve) => {
-
-        setTimeout(() =>{
-          const mydata = idCategoria? data.filter((item) => item.categoria === idCategoria) : data;
-         resolve(mydata);
-      }, 500);
-    });
-
-    getItems.then((res) => {
-      setItems(res);
-    })
-    .finally(() => setLoading(false));
+      setLoading(true)
+      const querydb = getFirestore();
+      const queryCollection = collection(querydb, 'data');
+      if (idCategoria) {
+      const queryFilter = query(queryCollection, where('categoria', '==', idCategoria));
+      getDocs(queryFilter)
+        .then(res => setItems(res.docs.map(menu => ({ id: menu.id, ...menu.data() }))))
+      } else {
+      getDocs(queryCollection)
+      .then(res => setItems(res.docs.map(menu => ({ id: menu.id, ...menu.data() }))))
+      } 
+      setLoading(false)
   }, [idCategoria]);
 
   return loading ? (
