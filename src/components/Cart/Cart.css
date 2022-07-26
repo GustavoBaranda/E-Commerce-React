@@ -1,11 +1,11 @@
 .cartContenedor{
-    display: flex;
+    display: grid;
 }
 
 .cartTotal{
-    font-size: 100px;
+    font-size: 50px;
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -67,7 +67,31 @@
 }
 
 .finalDeCompra{
-    display: flex;
+    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
+ }
+ .centrar{
+    margin: 0 auto;
+ }
+
+ .form{
+    margin: 80px;
+ } 
+
+ input{
+    align-items: center;
+    font-size: 25px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5); 
+    color: white;
+    box-shadow: 0 5px 15px #fff;
+    padding: 5px;
+    color: #000;
+ }
+
+ label, .label{
+    width: 200px;
+    text-align: center;
  }

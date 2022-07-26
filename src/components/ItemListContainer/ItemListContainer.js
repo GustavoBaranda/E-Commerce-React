@@ -13,18 +13,26 @@ function ItemListContainer ({ greetings }) {
   const {idCategoria} = useParams();
  
     useEffect(() =>{
+ 
       setLoading(true)
+ 
       const querydb = getFirestore();
+
       const queryCollection = collection(querydb, 'data');
+
       if (idCategoria) {
-      const queryFilter = query(queryCollection, where('categoria', '==', idCategoria));
-      getDocs(queryFilter)
-        .then(res => setItems(res.docs.map(menu => ({ id: menu.id, ...menu.data() }))))
+        const queryFilter = query(queryCollection, where('categoria', '==', idCategoria));
+      
+        getDocs(queryFilter)
+          .then(res => setItems(res.docs.map(menu => ({ id: menu.id, ...menu.data() }))))
+      
       } else {
       getDocs(queryCollection)
-      .then(res => setItems(res.docs.map(menu => ({ id: menu.id, ...menu.data() }))))
+        .then(res => setItems(res.docs.map(menu => ({ id: menu.id, ...menu.data() }))))
       } 
+ 
       setLoading(false)
+      
   }, [idCategoria]);
 
   return loading ? (

@@ -12,7 +12,7 @@ const ItemCart = ({menu}) => {
             <div className="cartItem">
 
                 <div className="menuCart">
-                    <img src={ menu.imagen } alt={ menu.nombre} />
+                    <img src={ menu.imagen } alt={ menu.nombre} style={{width: '100%'}} />
                 </div>
                 <div className="menuDescripcion">
                     <p>Menu:</p>
