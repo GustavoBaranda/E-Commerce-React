@@ -11,7 +11,7 @@ function Cart(){
     const [telefono, setTelefono] = useState("");
     const [email, setEmail] = useState("");
     const [domicilio, setDomicilio] = useState("");
-    const [orderId, setOrderId] = useState(null);
+    const [orderId, setOrderId] = useState(false);
 
     const nombreCliente = (event) => {
         const value = event.target.value;
@@ -48,21 +48,10 @@ const addOrder = () => {
     addDoc(ordersCollection, order).then(({ id }) => setOrderId(id));
     
 };
-
-console.log('esta es tu orden es', orderId);
-    const compraExitosa = () => {
-    Swal.fire({
-        title: 'Tu orden de compra es:',
-        text:`${orderId}`
-    });
-}
-
-
    
     const handleClick = () => {
         addOrder();
         clearCart();
-        compraExitosa();
     }
     
     
@@ -70,8 +59,18 @@ console.log('esta es tu orden es', orderId);
         return(
             <div className="cartVacio">
                 <div className="mensajeCartVacio">
-                    <p className="titulo">No hay elementos en el carrito</p>
-                    <Link to={'/'}><p className="titulo">Ir a la carta</p></Link>
+                    {
+                        orderId != ""
+                        ?<div>
+                            <p className="titulo">Tu orden de compra es:</p>
+                            <p className="ordenCompra">{orderId}</p>
+                            <Link to={'/'}><p className="titulo">Ir a la carta</p></Link>
+                        </div>
+                        :<div>
+                            <p className="titulo">No hay elementos en el carrito</p>
+                            <Link to={'/'}><p className="titulo">Ir a la carta</p></Link>
+                        </div>
+                }
                 </div>
             </div>
         )

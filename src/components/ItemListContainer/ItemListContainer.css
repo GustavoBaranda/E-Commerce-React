@@ -14,6 +14,13 @@
     color: #e07924;
     text-align: center;
 }
+.ordenCompra{
+    font-size: 100px;
+    margin: auto;
+    margin-bottom: 100px;
+    color: #fff;
+    text-align: center;
+}
 
 .cargando{
     color: #fff;
