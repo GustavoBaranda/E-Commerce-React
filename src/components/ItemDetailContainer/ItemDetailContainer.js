@@ -1,5 +1,4 @@
 import ItemDetail from '../ItemDetail/ItemDetail';
-import Form from '../Form/Form';
 import React, { useEffect, useState } from 'react';
 import Spinner from '../Spinner/Spinner'
 import {useParams} from 'react-router-dom';
@@ -25,10 +24,7 @@ function ItemDetailContainer (){
                 Loading ? (
                 <Spinner />
                 ) : (
-                <>    
-                    <ItemDetail {...menu} />
-                    <Form {...menu}/>
-                </>
+                <ItemDetail {...menu} />
                 )
             }           
         </>
