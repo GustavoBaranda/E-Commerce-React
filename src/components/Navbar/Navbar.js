@@ -15,7 +15,7 @@ const Navbar = () => {
                 </Link>
                 <p>Rodolfo's Beer&Burger</p>
             </div>
-            <div className="navegacion">
+            <nav className="navegacion">
                 <ul className="Menu">
                     <li className="MenuItem">
                         <NavLink className="NavLink" to="/">
@@ -36,11 +36,11 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <div className="Widget">
-                    <Link className="Link" to="/cart">
+                    <Link className="Widget" to="/cart">
                         <Widget />
                     </Link>
                 </div>
-            </div>
+            </nav>
             
             
         </div>    

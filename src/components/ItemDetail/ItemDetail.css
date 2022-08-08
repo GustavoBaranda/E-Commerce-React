@@ -1,28 +1,28 @@
 .ContainerDetail{
-    position: relative;
-    padding-top: 20px;
     text-align: center;
     margin: 100px auto;
     font-family: sans-serif;
     color: #fff;
+    min-height: 56vh;
 }
 
 .ItemDetail {
-    max-width: 1300px;
+    max-width: 850px;
+    max-height: 550px;
     display: grid;
     gap: 20px;
     grid-template-areas:
-    "imgDiv combo combo"
+    "combo combo combo"
     "imgDiv descripcion descripcion"
-    "precioDetail descripcion descripcion"
-    "contadorDetail descripcion descripcion";
+    "precioDetail precioDetail precioDetail"
+    "contadorDetail contadorDetail contadorDetail";
     margin: 0 auto;
     border-radius: 5px;
     border: 1px solid #e07924; 
     box-shadow: 0 5px 15px #e07924;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
 }
 
 .combo{
@@ -33,7 +33,7 @@
 
 .descripcion{
     grid-area: descripcion;
-    font-size: 25px;
+    font-size: 20px;
     margin: 0;
     text-align: center;
 }
@@ -41,18 +41,19 @@
 .precioDetail{
     grid-area: precioDetail;
     font-size: 50px;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
 }
 
 .contadorDetail{
     grid-area: contadorDetail;
     text-align: center;
+    min-height: 150px;
 }
 
 .imgDiv{
     grid-area: imgDiv;
-    width: 700px;
+    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,6 +92,7 @@
 }
 
 .bottons{
+    margin-top: 52px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

@@ -1,24 +1,16 @@
 .ItemListContainer{
-    padding-top: 20px;
     text-align: center;
-    margin: 100px auto;
+    margin: 30px auto;
     font-family: sans-serif;
     max-width: 85%;
-   
+    min-height: 70vh;
 }
 
-.titulo{
-    font-size: 100px;
-    margin: auto;
-    margin-bottom: 100px;
-    color: #e07924;
-    text-align: center;
-}
 .ordenCompra{
     font-size: 100px;
     margin: auto;
     margin-bottom: 100px;
-    color: #fff;
+    color: #000;
     text-align: center;
 }
 

@@ -8,7 +8,7 @@ const ItemCart = ({menu}) => {
     const {removeItem} = useCartContext();
 
     return (
-        <div className="cartContenedor">
+        <div className="itenCartContenedor">
             <div className="cartItem">
 
                 <div className="menuCart">

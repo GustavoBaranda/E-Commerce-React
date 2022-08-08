@@ -1,5 +1,7 @@
 import ItemDetail from '../ItemDetail/ItemDetail';
+import Form from '../Form/Form';
 import React, { useEffect, useState } from 'react';
+import Spinner from '../Spinner/Spinner'
 import {useParams} from 'react-router-dom';
 import {getFirestore, doc, getDoc} from 'firebase/firestore';
 function ItemDetailContainer (){
@@ -18,13 +20,18 @@ function ItemDetailContainer (){
 
 
     return(  
-        <div>
-            {Loading ?
-            <div className="cargando">
-                <h1>Cargando...</h1>
-            </div>  
-            : <ItemDetail {...menu} />}           
-        </div>
+        <>
+            {
+                Loading ? (
+                <Spinner />
+                ) : (
+                <>    
+                    <ItemDetail {...menu} />
+                    <Form {...menu}/>
+                </>
+                )
+            }           
+        </>
     );
 };
 

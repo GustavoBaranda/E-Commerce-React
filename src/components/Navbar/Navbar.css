@@ -10,7 +10,7 @@
   max-width: 85%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: auto;
   height: 70px;
 }
@@ -58,13 +58,14 @@
   cursor: pointer;
   text-decoration: none;
   height: 100%;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem ;
   color: #e07924;
   font-family: sans-serif;
   font-weight: 300;
   cursor: pointer;
   transition: 0.5s all ease;
   font-size: 1.2rem;
+  border-radius: 10px;
 }
 
 .NavLink:hover {
@@ -74,7 +75,12 @@
   border-radius: 5px;
 }
 
-
+.active{
+  color: #fff;
+  fill: #fff;
+  background-color: #e07924;
+  font-size: 1.2rem;
+}
 
 
 

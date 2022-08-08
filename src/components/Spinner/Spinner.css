@@ -1,0 +1,7 @@
+.spinnerContainer{
+    display: flex;
+}
+
+.spinnerImg{
+    margin: 15% auto;
+}

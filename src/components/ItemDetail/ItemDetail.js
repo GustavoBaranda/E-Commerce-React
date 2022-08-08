@@ -28,8 +28,8 @@ function ItemDetail( { imagen, nombre, descripcion, precio, stock, id } ) {
                     <div className="descripcion">
                         <p>{ descripcion }</p> 
                     </div>
-                    <div>
-                        <p className="precioDetail">$ { precio }</p>
+                    <div className="precioDetail">
+                        <p>$ { precio }</p>
                     </div>
                     <div className="contadorDetail">
                         {
@@ -39,7 +39,7 @@ function ItemDetail( { imagen, nombre, descripcion, precio, stock, id } ) {
                                 <Link className="SeguirComparando" to="/">Seguir Comprando</Link>
                             </div>
                             : 
-                            <ItemCount initial={1} stock={stock} onAdd={onAdd} />
+                            <ItemCount initial={0} stock={stock} onAdd={onAdd} />
                             
                         }
                     </div>

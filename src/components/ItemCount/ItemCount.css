@@ -50,7 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: center;  
-    margin: 20px 10px;
+    margin: 20px 0px;
 }    
 
 .agregarAlCarrito{
@@ -62,8 +62,9 @@
     color: white;
     background-color:rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px #fff;
-    padding: 5px;
+    padding: 5px 0 0;
     cursor: pointer;
+    padding: 5px;
 }
 
 .stockDisponible{

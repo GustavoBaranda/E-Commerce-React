@@ -1,4 +1,5 @@
-import React, { useState, useContext, createContext } from 'react';
+import React, { useContext, createContext } from 'react';
+import { useLocalStorage } from "../components/LocalStorage/useLocalStorage"
 
 const CartContext = createContext( [] );
 
@@ -6,7 +7,7 @@ export const useCartContext = () => useContext( CartContext );
 
 const CartProvider = ( { children } ) => {
 
-    const [ cart, setCart] = useState( [] );
+    const [ cart, setCart] = useLocalStorage('Carrito', [] );
     
     const addItem = ( item, quantity ) => {
         if( isInCart( item.id ) ){
@@ -18,7 +19,7 @@ const CartProvider = ( { children } ) => {
     }
   };
 
-  console.log("CARRITO", cart )
+
 
     const clearCart = () => setCart( [] );
     

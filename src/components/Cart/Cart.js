@@ -1,127 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import './Cart.css';
 import {useCartContext} from '../../context/Cartcontext'
 import ItemCart from '../ItemCart/ItemCart';
-import { addDoc, collection, getFirestore } from "firebase/firestore";
-import Swal from 'sweetalert2';
+import './Cart.css';
+
 function Cart(){
     const { cart, totalPrice, clearCart } = useCartContext();
-    const [nombre, setNombre] = useState("");
-    const [telefono, setTelefono] = useState("");
-    const [email, setEmail] = useState("");
-    const [domicilio, setDomicilio] = useState("");
-    const [orderId, setOrderId] = useState(false);
-
-    const nombreCliente = (event) => {
-        const value = event.target.value;
-        setNombre(value);
-      };
-      const emailCliente = (event) => {
-        const value = event.target.value;
-        setEmail(value);
-      };
-      const domicilioCliente = (event) => {
-        const value = event.target.value;
-        setDomicilio(value);
-      };
-      const telefonoCliente = (event) => {
-        const value = event.target.value;
-        setTelefono(value);
-      };
-const addOrder = () => {
-    const userInfo = { nombre, email, domicilio, telefono };
-
-    const order = {
-        userInfo,
-        items: cart.map((product) => ({
-            id: product.id,
-            title: product.nombre,
-            price: product.precio,
-            quantity: product.quantity,
-        })),
-        total: totalPrice(),
-    }
-
-    const db = getFirestore();
-    const ordersCollection = collection(db, "orders");
-    addDoc(ordersCollection, order).then(({ id }) => setOrderId(id));
-    
-};
-   
-    const handleClick = () => {
-        addOrder();
-        clearCart();
-    }
-    
-    
-    if( cart.length === 0 ) {
-        return(
-            <div className="cartVacio">
-                <div className="mensajeCartVacio">
-                    {
-                        orderId != ""
-                        ?<div>
-                            <p className="titulo">Tu orden de compra es:</p>
-                            <p className="ordenCompra">{orderId}</p>
-                            <Link to={'/'}><p className="titulo">Ir a la carta</p></Link>
-                        </div>
-                        :<div>
-                            <p className="titulo">No hay elementos en el carrito</p>
-                            <Link to={'/'}><p className="titulo">Ir a la carta</p></Link>
-                        </div>
-                }
-                </div>
-            </div>
-        )
-    }
-
+        
+  
     return (
-        <>
-            <div>            
-                {
-                    cart.map(menu => <ItemCart key={menu.id} menu={menu} />)
-                }
-           </div>
-           <div className="cartContenedor">
-                <div className="centrar">
-                <div className="form">
-                        <label className="label">Nombre Completo</label>
-                        <br/>
-                        <input 
-                            type="text"
-                            placeholder='Nombre Completo'
-                            value={nombre}
-                            onChange={nombreCliente}
-                        ></input>
-                        <br/>
-                        <label>Correo Electronico</label>
-                        <br/>
-                        <input
-                            type="email"
-                            placeholder='mail@ejemplo.com'
-                            value={email}
-                            onChange={emailCliente}
-                        ></input>
-                        <br/>
-                        <label>Domilicio</label>
-                        <br/>
-                        <input
-                            type="text"
-                            placeholder='Domilicio'
-                            value={domicilio}
-                            onChange={domicilioCliente}
-                        ></input>
-                        <br/>
-                        <label>Telefono</label>
-                        <br/>
-                        <input
-                            min="0"
-                            type="number"
-                            placeholder='Telefono'
-                            value={telefono}
-                            onChange={telefonoCliente}
-                        ></input>
+
+            <>  
+                { cart.length === 0 ? ( 
+                
+                <div className="cartVacio">
+                    <div className="mensajeCartVacio">
+                        <p className="mensajeCarritoVacio">No hay ningun pedido en el carrito</p>
+                        <Link to={'/'}><p className="carta">Ir a la carta</p></Link>
+                    </div>
+                </div>
+                ) : (
+                <div className="cartContenedor">    
+                    <div className="carrito">            
+                        {
+                            cart.map(menu => <ItemCart key={menu.id} menu={menu} />)
+                        }
                     </div>
                     <div>
                         <p className="cartTotal">
@@ -132,19 +35,13 @@ const addOrder = () => {
                         <div className="finalDeCompra">
                             <button className="vaciarCarrito" onClick={ clearCart  }>Vaciar carrito</button>
                             <Link className="SeguirComprando" to="/">Seguir comprando</Link>
-                            <button className="finalizarCompra" 
-                            disabled={
-                            !nombre ||
-                            !telefono ||
-                            !email || 
-                            !domicilio}
-                            onClick={handleClick}>Finalizar compra</button>
-                        </div>
+                            <Link className="finalizarCompra" to="/Form">Finalizar compra</Link>
+                         </div>
                     </div>
-                    
-                </div>
-           </div>
-        </>
-    )
+                </div>    
+                )
+                }
+            </>
+   )
 }
 export default Cart;

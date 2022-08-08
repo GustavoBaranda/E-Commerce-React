@@ -1,7 +1,8 @@
 import './ItemListContainer.css';
 import Itemlist from '../ItemList/ItemList';
 import React, { useEffect, useState } from 'react';
-import {useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom';
+import Spinner from '../Spinner/Spinner'
 import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore';
 
 function ItemListContainer ({ greetings }) {
@@ -35,17 +36,20 @@ function ItemListContainer ({ greetings }) {
       
   }, [idCategoria]);
 
-  return loading ? (
-    <div className="cargando">
-          <h1>Cargando...</h1>
-    </div>      
-    ) : (
-
-    <div className="ItemListContainer">
-      <h1 className="titulo">{ greetings }</h1>
-      <br />
-      <Itemlist items={items} />
-    </div>
+  return (
+    <>
+      { 
+        loading ? (
+          <Spinner />     
+        ) : (
+        <div className="ItemListContainer">
+          <h1 className="titulo">{ greetings }</h1>
+          <br />
+          <Itemlist items={items} />
+        </div>
+        )
+      }
+    </>
   );
 };
 
