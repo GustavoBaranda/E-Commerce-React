@@ -27,6 +27,15 @@ function Form(){
         }))
     }
 
+    function updateStocks(cart) {
+        cart.forEach((cart) => {
+            const db = getFirestore();
+            const stockDoc = doc(db, "data", cart.id);
+            updateDoc(stockDoc, { stock: cart.stock - cart.quantity });
+            
+        });
+    }
+        
     const addOrder = () => {
         setLoading(true)
         const order = {
@@ -45,6 +54,7 @@ function Form(){
         const ordersCollection = collection(db, "orders");
         addDoc(ordersCollection, order).then(({ id }) => {
             setOrderId(id)
+            updateStocks(cart)
             setLoading(false)
         });
         

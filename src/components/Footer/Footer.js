@@ -37,7 +37,7 @@ function Footer() {
             <p className="text">Copyright © 2022 - All right reserved by Rodolfo's Beer&Burger</p>
         </div>
         <div>
-            <p  className="text">Gustavo Baranda Fron-End Developer</p>
+            <p  className="text">Gustavo Baranda Front-End Developer</p>
         </div>
     
       </footer>
