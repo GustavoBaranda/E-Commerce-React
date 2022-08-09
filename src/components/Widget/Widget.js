@@ -1,5 +1,5 @@
-import { FaCartPlus } from "react-icons/fa";
-import {useCartContext} from "../../context/Cartcontext"
+import { FaCartPlus } from 'react-icons/fa';
+import {useCartContext} from '../../context/Cartcontext'
 import './Widget.css'
 
 function Widget() {

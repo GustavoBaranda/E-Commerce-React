@@ -1,6 +1,6 @@
-import React from "react";
-import { GiHamburger } from "react-icons/gi";
-import Widget from "../Widget/Widget";
+import React from 'react';
+import { GiHamburger } from 'react-icons/gi';
+import Widget from '../Widget/Widget';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 

@@ -35,7 +35,7 @@ function Cart(){
                         <div className="finalDeCompra">
                             <button className="vaciarCarrito" onClick={ clearCart  }>Vaciar carrito</button>
                             <Link className="SeguirComprando" to="/">Seguir comprando</Link>
-                            <Link className="finalizarCompra" to="/Form">Finalizar compra</Link>
+                            <Link className="finalizarCompra" to="/Form">Realizar Compra</Link>
                          </div>
                     </div>
                 </div>    

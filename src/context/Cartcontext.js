@@ -1,5 +1,5 @@
 import React, { useContext, createContext } from 'react';
-import { useLocalStorage } from "../components/LocalStorage/useLocalStorage"
+import { useLocalStorage } from '../components/LocalStorage/useLocalStorage'
 
 const CartContext = createContext( [] );
 

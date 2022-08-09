@@ -1,26 +1,61 @@
-El proyecto trata de una hamburgueseria donde por el momento extraemos los datos de los productos de una api local, un archivo jsx.
+# Rodolfo's Beer&Burger
 
-La aplicacion se dividen en dos componentes principales: 
+## Descripción
 
-1) Navbar
-2) ItemListContainer
-3) ItemDetailContainer
+`Proyecto Final` para el curso de ReactJS de  `Coder House` (2022).
+La aplicación permite conectarse con una base de datos de `Firebase`.
+Permite seleccionar ciertos productos, visualizar los detalles de los mismos, agregarlos al carrito, solicitar datos de los cliente, simular la compra de los productos y descontar el stock en la base de datos.
+Al clickear sobre el botón "realizar compra", pide llenar un formulario con datos básicos y luego de confirmar
+se genera un id de orden de compra en firebase donde se guarda con los datos del cliente con los productos que compró.
 
-De esos componentes pricipales se anexan 5 componentes adicionales para el funcionamiento de la aplicacion. 
+**Tecnologías y librerías:**
+<p style="display: flex;  ">
+<img height="20" alt="REACT" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png">
+<img height="20" alt="CSS" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png">
+<img height="20" alt="HTML" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png">
+<img height="20" alt="JS" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
+<img height="20" alt="FIREBASE" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png">
+</p>
+- Interfaz realizada con **ReactJS - Create React App**
+- Estilos con **CSS Puro**
+- Ruteo con **React Router Dom**
+- Backend con **Firebase**
 
-1) Widget
-2) ItemCount
-3) Item
-4) ItemList
-5) ItemDetail
+## Descargar y correr el proyecto
 
-Las librerias que se usaron fueron:
+### Instalación 🔧
 
-1) react-icons
-    se uso esta libreria para los iconos de la Navbar.
-2) react-router-dom
-    se uso esta libreria para el uso de la rutas de navegacion
+Para descargar el proyecto pueden descargar el repositorio en formato zip_
 
-En la raiz de la carpeta se encuentra el archivo:
-FuncionamientoApp.gif
-Que muestra en una pequeña animación del funcionamiento de la aplicacion.
+1 - Ir a "Code" -> "Dowload Zip"
+
+2 - Descomprimir el archivo
+
+3 - En la carpeta donde se encuentra en "package.json" ejecutar en una terminal:_
+
+### `npm install`
+
+4 - Una vez finalizado, ejecutar:
+
+### `npm start`
+
+Se abre una pestaña del navegador en el puerto 3000:
+
+### Sino copiar esta URL y pegarla en el navegador: `http://localhost:3000`
+
+### Instalación con git clone🔧
+
+Se puede clonar el repositorio, ingresando a una terminal y ejecutando:
+
+https://github.com/GustavoBaranda/React.git
+
+Luego continuar con el paso 3 de la otra forma
+
+## Despliegue 📦
+
+El mismo proyecto fue desplegado en Vercel para que lo navegar.
+https://rodolfosbeerandburguer.vercel.app/
+
+
+## VIDEO
+Hacé click [ACA](https://youtu.be/OkyKGlzTfsc) para ver un video de demostración del proceso de compra de la app.

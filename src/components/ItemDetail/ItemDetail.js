@@ -13,7 +13,7 @@ function ItemDetail( { imagen, nombre, descripcion, precio, stock, id } ) {
     const onAdd = ( quantity ) => {
         //console.log(`Compraste ${cantidad} ${nombre}`);
         setGoToCart( true );
-        addItem( { id, nombre, precio, imagen }, quantity );
+        addItem( { id, nombre, precio, imagen,  stock }, quantity );
     }
     return (
         <>

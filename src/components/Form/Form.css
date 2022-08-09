@@ -80,6 +80,7 @@
  .TiketId{
     font-size: 20px;
     margin: 5px;
+    color: blue;
  }
 
  .carta{
@@ -91,6 +92,7 @@
     font-size: 20px;
     color: #fff;
     background-color: #e07924;
+    box-shadow: 0 5px 15px #e07924;
     width: 200px;
  } 
  

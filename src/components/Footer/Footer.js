@@ -1,7 +1,7 @@
-import { FaGithubSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaWhatsappSquare } from "react-icons/fa";
-import { ImMail } from "react-icons/im";
+import { FaGithubSquare } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaWhatsappSquare } from 'react-icons/fa';
+import { ImMail } from 'react-icons/im';
 import './Footer.css'
 
 

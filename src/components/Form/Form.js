@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Spinner from '../Spinner/Spinner'
 import './Form.css';
 import {useCartContext} from '../../context/Cartcontext'
-import { addDoc, collection, getFirestore, doc, updateDoc } from "firebase/firestore";
+import { addDoc, collection, getFirestore, doc, updateDoc } from 'firebase/firestore';
 
 function Form(){
     const { cart, totalPrice, clearCart } = useCartContext();
@@ -30,12 +30,12 @@ function Form(){
     function updateStocks(cart) {
         cart.forEach((cart) => {
             const db = getFirestore();
-            const stockDoc = doc(db, "data", cart.id);
+            const stockDoc = doc(db, 'data', cart.id);
             updateDoc(stockDoc, { stock: cart.stock - cart.quantity });
-            
+            console.log(cart)
         });
     }
-        
+    console.log(cart)
     const addOrder = () => {
         setLoading(true)
         const order = {
@@ -145,7 +145,7 @@ function Form(){
                     <input 
                         className="finalizarCompraInput"
                         type="submit"
-                        value="FinalizarCompra"
+                        value="Finalizar Compra"
                     />
                 </form>
            </div>
