@@ -16,9 +16,9 @@ se genera un id de orden de compra en firebase donde se guarda con los datos del
 <img height="20" alt="JS" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
 <img height="20" alt="FIREBASE" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png">
 </p>
-- Interfaz realizada con **ReactJS - Create React App**
-- Estilos con **CSS Puro**
-- Ruteo con **React Router Dom**
+- Interfaz realizada con **ReactJS - Create React App**</br>
+- Estilos con **CSS Puro**</br>
+- Ruteo con **React Router Dom**</br>
 - Backend con **Firebase**
 
 ## Descargar y correr el proyecto
@@ -31,7 +31,7 @@ Para descargar el proyecto pueden descargar el repositorio en formato zip_
 
 2 - Descomprimir el archivo
 
-3 - En la carpeta donde se encuentra en "package.json" ejecutar en una terminal:_
+3 - En la carpeta donde se encuentra en "package.json" ejecutar en una terminal:
 
 ### `npm install`
 
@@ -53,7 +53,7 @@ Luego continuar con el paso 3 de la otra forma
 
 ## Despliegue 📦
 
-El mismo proyecto fue desplegado en Vercel para que lo navegar.
+El mismo proyecto fue desplegado en Vercel para que lo navegar.</br>
 https://rodolfosbeerandburguer.vercel.app/
 
 
