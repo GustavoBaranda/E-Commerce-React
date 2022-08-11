@@ -18,12 +18,17 @@ function Form(){
         ConfirmarEmail:''
     });
 
-    const { Nombre, Domicilio, Localidad, Telefono, Email, EmailConfirm } = buyer
+    const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i
+	const telefonoRegex = /^[+]?[0-9]$/im
+
+    const { Nombre, Domicilio, Localidad, Telefono, Email, ConfirmarEmail } = buyer
 
     const handleInputChange = (e) => {
+
+        const { name, value } = e.target
         setBuyer(({
             ...buyer,
-            [e.target.name]:e.target.value
+            [name]:value
         }))
     }
 
@@ -32,14 +37,16 @@ function Form(){
             const db = getFirestore();
             const stockDoc = doc(db, 'data', cart.id);
             updateDoc(stockDoc, { stock: cart.stock - cart.quantity });
-            console.log(cart)
+            
         });
     }
-    console.log(cart)
+    
     const addOrder = () => {
+
         setLoading(true)
+
         const order = {
-            date: Date(),
+            
             buyer,
             items: cart.map((product) => ({
                 id: product.id,
@@ -47,6 +54,7 @@ function Form(){
                 price: product.precio,
                 quantity: product.quantity,
             })),
+            date: Date(),
             total: totalPrice()
         }
 
@@ -67,12 +75,14 @@ function Form(){
     }
     
     
-    if( orderId != "" ) {
+    if( orderId === true ) {
         return (
             <div className="tiketContenedor">
                 <div className="tiket">
-                    <h2>Gracias por tu Compra</h2>
+                    <h2>¡Muchas gracias por tu compra!</h2>
+                    <h3>**{(buyer.Nombre).toUpperCase()}**</h3>
                     <p className="compra">La compra se ha realizado exitosamente</p>
+                    <p className="compra">Te enviamos un mail a <span className="mail">{(buyer.Email)}</span></p>
                     <p className="compra">Tu nro. de orden es:</p>
                     <p className="TiketId">{orderId}</p>
                     <h2>Rodolfo's Beer&Burger</h2>
@@ -119,7 +129,7 @@ function Form(){
                     />
                     <input
                         min="0"
-                        type="number"
+                        type="tel"
                         name="Telefono"
                         placeholder=' Telefono'
                         value={Telefono}
@@ -138,15 +148,32 @@ function Form(){
                         type="email"
                         name="ConfirmarEmail"                            
                         placeholder=" Confirme su email "
-                        value={EmailConfirm}
+                        value={ConfirmarEmail}
                         required
                         onChange={handleInputChange} 
                     />
-                    <input 
-                        className="finalizarCompraInput"
-                        type="submit"
+                    {
+                        buyer.Nombre && buyer.Domicilio && buyer.Telefono 
+                        && (buyer.Email === buyer.ConfirmarEmail) 
+                        && telefonoRegex.test(buyer.Telefono) 
+                        && emailRegex.test(buyer.Email, buyer.ConfirmarEmail)
+                    ? (
+                        // Botón habilitado
+                        <input 
+                            className="finalizarCompraActive"
+                            type="submit"
+                            value="Finalizar Compra"
+                        />
+                    ) : (
+                        // Botón deshabilitado
+                        <input 
+                        className="finalizarCompraDisable"
+                        type="subbmit"
                         value="Finalizar Compra"
+                        disabled
                     />
+                    )
+                    }
                 </form>
            </div>
         </div>
