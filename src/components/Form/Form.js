@@ -19,7 +19,7 @@ function Form(){
     });
 
     const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i
-	const telefonoRegex = /^[+]?[0-9]$/im
+	const telefonoRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{1,6}$/im
 
     const { Nombre, Domicilio, Localidad, Telefono, Email, ConfirmarEmail } = buyer
 
@@ -75,7 +75,7 @@ function Form(){
     }
     
     
-    if( orderId === true ) {
+    if( orderId != "" ) {
         return (
             <div className="tiketContenedor">
                 <div className="tiket">
