@@ -1,51 +1,62 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { GiHamburger } from 'react-icons/gi';
 import Widget from '../Widget/Widget';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
+import { FaBars } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
+
+
 
 const Navbar = () => {
-  return (
 
-    <div className="Container">
-        <div className="Wrapper">
+    const [isMobile, setIsMobile] = useState(false)
+
+  return (
+        <nav className="navbar">
             <div className="LogoContainer">
                 <Link to="/">
                     <GiHamburger />
                 </Link>
                 <p>Rodolfo's Beer&Burger</p>
             </div>
-            <nav className="navegacion">
-                <ul className="Menu">
-                    <li className="MenuItem">
-                        <NavLink className="NavLink" to="/">
-                            MENU                                      
-                        </NavLink>                
-                        <NavLink className="NavLink" to="/categoria/hamburguesas">
-                            HAMBURGUESAS                                      
-                        </NavLink>                
-                        <NavLink className="NavLink" to="/categoria/acompanamiento">
-                            ACOMPAÑAMIENTO                                      
-                        </NavLink>                
-                        <NavLink className="NavLink" to="/categoria/bebidas">
-                            BEBIDAS                                      
-                        </NavLink>                
-                        <NavLink className="NavLink" to="/categoria/postres">
-                            POSTRES                                      
-                        </NavLink>                
-                    </li>
-                </ul>
-                <div className="Widget">
-                    <Link className="Widget" to="/cart">
-                        <Widget />
-                    </Link>
-                </div>
-            </nav>
+            <ul className={ isMobile ? "nav-links-mobile" : "nav-links" }
+            onClick={() => setIsMobile(false)}
+            >
+                <NavLink className="NavLink" to="/">
+                    <li>MENU</li>                                      
+                </NavLink>                
+                <NavLink className="NavLink" to="/categoria/hamburguesas">
+                    <li>HAMBURGUESAS</li>                                      
+                </NavLink>                
+                <NavLink className="NavLink" to="/categoria/acompanamiento">
+                    <li>ACOMPAÑAMIENTO</li>                                      
+                </NavLink>                
+                <NavLink className="NavLink" to="/categoria/bebidas">
+                    <li>BEBIDAS</li>                                        
+                </NavLink>                
+                <NavLink className="NavLink" to="/categoria/postres">
+                    <li>POSTRES</li>                                       
+                </NavLink>
+                <Link className="Widget" to="/cart">
+                    <Widget />
+                 </Link>                
+            </ul>
             
-            
-        </div>    
-    </div> 
-
+            <button className="mobile-menu-icon"
+                onClick={() => setIsMobile(!isMobile)}
+            >
+                {
+                    isMobile  ?
+                    ( 
+                    <FaTimes /> 
+                    ):(
+                    <FaBars/>
+                    )
+                }
+            </button>
+        </nav>
   );
 }
 

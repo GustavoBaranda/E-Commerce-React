@@ -1,122 +1,126 @@
 
 .formContenedorPrincipal{
-    height: 70vh;
-    display: flex;
+   height: 70vh;
+   display: flex;
+   padding: 0 3%;
 }
 .formContenedor{
-    margin: 0 auto;
+   margin: 0 auto;
+   display: flex;
+   
 }
- .form{
-    margin-top: 12%;
-    height: 500px;
-    width: 600px;
-    border: 1px solid #e07924;
-    box-shadow: 0 5px 15px #e07924;
-    border-radius: 10px;
+.form{
+   margin: 0 auto;
+   height: 430px;
+   max-width:450px;
+   border: 1px solid #e07924;
+   box-shadow: 0 5px 15px #e07924;
+   border-radius: 10px;
+   padding: 0 3%;
 }
 
 .FinalizandoCompra{
-    color: #e07924;
-    text-align: center;
-    padding-top: 50px;
+   color: #e07924;
+   text-align: center;
+   padding: 50px;
 }
 
- .formText{
-    color: #fff;
-    text-align: center;
-    padding: 15px;
- }
-
- .formText {
-    color: #e07924;
- }
-
- input{
-    background: #fff;
-    align-items: center;
-    width: 95%;
-    font-size: 16px;
-    border-radius: 10px;
-    border: 2px solid #e07924; 
-    color: white;
-    box-shadow: 1px 5px 5px #e07924;
-    padding: 5px 0;
-    margin: 10px;;
-    color: #000;
- }
-
- input::placeholder {
-    color: #e07924;
-    font-weight: 500;
- }
-
- input:focus {
-    background: none;
-    outline: none;
-    box-shadow: none;
-  }
- 
- .tiketContenedor{
-    display: flex;
-    min-height: 76vh;
- }
-
- .tiket{
-    text-align: center;
-    max-width: 500px;
-    max-height: 280px;
-    border-radius: 15px;
-    border: 2px solid #ccc;
-    box-shadow: 0 5px 15px #e07924;
-    margin: 0 auto;
-    margin-top: 12%;
-    padding: 20px 10px 0;  
- }
- 
- .compra{
-    margin: 5px;
- }
-
- .TiketId, .mail{
-    font-size: 16px;
-    margin: 5px;
-    color: blue;
- }
-
- .carta{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    padding: 5px;
-    border-radius: 10px;
-    font-size: 20px;
-    color: #fff;
-    background-color: #e07924;
-    box-shadow: 0 5px 15px #e07924;
-    width: 200px;
- } 
- 
- .finalizarCompraActive{
-    display: block;
-    padding: 5px;
-    border-radius: 10px;
-    font-size: 20px;
-    color: #fff;
-    background-color: #e07924;
-    max-width: 100%;
-    margin: 0 auto;
-    margin-top: 35px;
- }
-
- .finalizarCompraDisable{
+.formText{
+   color: #fff;
    text-align: center;
+   padding: 15px;
+}
+
+.formText {
+   color: #e07924;
+}
+
+input{
+   background: #fff;
+   align-items: center;
+   width: 100%;
+   font-size: 16px;
+   border-radius: 10px;
+   border: 2px solid #e07924; 
+   color: white;
+   box-shadow: 1px 5px 5px #e07924;
+   padding: 5px 0;
+   margin: 5px 0;
+   color: #000;
+}
+
+input::placeholder {
+   color: #e07924;
+   font-weight: 500;
+}
+
+input:focus {
+   background: none;
+   outline: none;
+   box-shadow: none;
+ }
+
+.tiketContenedor{
+   display: flex;
+   min-height: 76vh;
+}
+
+.tiket{
+   text-align: center;
+   max-width: 500px;
+   max-height: 280px;
+   border-radius: 15px;
+   border: 2px solid #ccc;
+   box-shadow: 0 5px 15px #e07924;
+   margin: 0 auto;
+   margin-top: 12%;
+   padding: 20px 10px 0;  
+}
+
+.compra{
+   margin: 5px;
+}
+
+.TiketId, .mail{
+   font-size: 16px;
+   margin: 5px;
+   color: blue;
+}
+
+.carta{
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 20px;
+   padding: 5px;
+   border-radius: 10px;
+   font-size: 20px;
+   color: #fff;
+   background-color: #e07924;
+   box-shadow: 0 5px 15px #e07924;
+   width: 200px;
+} 
+
+.finalizarCompraActive{
    display: block;
    padding: 5px;
    border-radius: 10px;
    font-size: 20px;
-   color: #e07924;
-   background-color:  rgba(0, 0, 0, 0.1);
+   color: #fff;
+   background-color: #e07924;
    max-width: 100%;
    margin: 0 auto;
    margin-top: 35px;
- }
+}
+
+.finalizarCompraDisable{
+  text-align: center;
+  display: block;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #e07924;
+  background-color:  rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 35px;
+}

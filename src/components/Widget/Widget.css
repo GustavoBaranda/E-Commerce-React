@@ -1,17 +1,16 @@
-.Widget{
-    max-width: 70%;
-  }
   
-  .NavLink svg {
-    fill: #e07924;
-    margin: 0;
-    font-size: 1.2rem;    
+  .widget svg {
+    margin-top: 21px;
+    margin-right: 0;
+    font-size: 1.2em;
+    fill: #e07924;  
   }
   
   .totalItem {
+    text-align: center;
     color: #e07924;
     font-size: 1.2rem;
-    margin-bottom: 8px;
+    margin-bottom:22px;
   }
   
   

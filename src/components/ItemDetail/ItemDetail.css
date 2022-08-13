@@ -97,3 +97,22 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
+@media screen and (max-width: 900px){
+    .ItemDetail{
+        margin: 0 3%;
+        max-height: 850px;
+        display: grid;
+        gap: 20px;
+        grid-template-areas:
+        "combo combo combo"
+        "imgDiv imgDiv imgDiv"
+        "descripcion descripcion descripcion"
+        "precioDetail precioDetail precioDetail"
+        "contadorDetail contadorDetail contadorDetail";
+    }
+    .imgDiv{
+        margin: 0 auto;
+    }   
+
+}
