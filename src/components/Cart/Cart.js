@@ -16,11 +16,12 @@ function Cart(){
                 <div className="cartVacio">
                     <div className="mensajeCartVacio">
                         <p className="mensajeCarritoVacio">No hay ningun pedido en el carrito</p>
-                        <Link to={'/'}><p className="carta">Ir a la carta</p></Link>
+                        <Link to={'/'}><p className="cartaCart">Ir a la carta</p></Link>
                     </div>
                 </div>
                 ) : (
-                <div className="cartContenedor">    
+                <div className="cartContenedor"> 
+                    <h1 className="carrritoCart">Orden</h1> 
                     <div className="carrito">            
                         {
                             cart.map(menu => <ItemCart key={menu.id} menu={menu} />)
@@ -34,8 +35,13 @@ function Cart(){
                     <div className="total">
                         <div className="finalDeCompra">
                             <button className="vaciarCarrito" onClick={ clearCart  }>Vaciar carrito</button>
-                            <Link className="SeguirComprando" to="/">Seguir comprando</Link>
-                            <Link className="finalizarCompra" to="/Form">Realizar Compra</Link>
+                            <button className="seguirComprando">
+                                <Link className="seguirComprandoLink" to="/">Seguir comprando</Link>
+                            </button>
+                            <button className="realizarCompra"> 
+                                <Link className="realizarCompraLink" to="/Form">Realizar Compra</Link>
+                            </button>
+                            
                          </div>
                     </div>
                 </div>    

@@ -79,13 +79,13 @@ function Form(){
         return (
             <div className="tiketContenedor">
                 <div className="tiket">
-                    <h2>¡Muchas gracias por tu compra!</h2>
-                    <h3>**{(buyer.Nombre).toUpperCase()}**</h3>
+                    <h2 className="tiketTitulo">¡Muchas gracias por tu compra!</h2>
+                    <h3 className="tiketCliente">**{(buyer.Nombre).toUpperCase()}**</h3>
                     <p className="compra">La compra se ha realizado exitosamente</p>
                     <p className="compra">Te enviamos un mail a <span className="mail">{(buyer.Email)}</span></p>
                     <p className="compra">Tu nro. de orden es:</p>
                     <p className="TiketId">{orderId}</p>
-                    <h2>Rodolfo's Beer&Burger</h2>
+                    <h2 className="tiketTituloBar">Rodolfo's Beer&Burger</h2>
                     <Link to={'/'}><p className="carta">Realizar otra compra</p></Link>
                 </div>
             </div>                        

@@ -33,10 +33,14 @@ function ItemDetail( { imagen, nombre, descripcion, precio, stock, id } ) {
                     </div>
                     <div className="contadorDetail">
                         {
-                            goToCart
-                            ? <div className="bottons">
-                                <Link className="irAlCarrito" to="/Cart">Ir al carrito</Link>
-                                <Link className="SeguirComparando" to="/">Seguir Comprando</Link>
+                            goToCart? 
+                            <div className="bottons">
+                                <button type="button" className="irAlCarrito">
+                                    <Link className="irAlCarritoLink" to="/Cart">Ir al carrito</Link>
+                                </button>
+                                <button type="button" className="seguirComprandoDetail">
+                                    <Link className="seguirComprandoDetailLink" to="/">Seguir Comprando</Link>
+                                </button>
                             </div>
                             : 
                             <ItemCount initial={0} stock={stock} onAdd={onAdd} />

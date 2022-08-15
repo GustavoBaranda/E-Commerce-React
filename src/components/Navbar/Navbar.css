@@ -73,7 +73,7 @@
 @media screen and (max-width: 1100px) {
   .navbar{
     width: 100%;
-    padding: 0 10px;
+    padding-left: 5px;
     display: flex;
     justify-content: space-evenly;
     background-color: #000;
@@ -102,8 +102,12 @@
     height: 100vh;
   }
 
+  .mobile-menu-icon svg{
+    margin: 0;
+  }
+
   .navLink, li{
-    color: #fff;
+    color: #e07924;
     text-align: center;
     margin: 0;
     padding: 25px 0;
@@ -129,7 +133,7 @@
 
   .active li{
     background-color: #000;
-    color: #e07924;
+    color: #fff;
   }
 
 }

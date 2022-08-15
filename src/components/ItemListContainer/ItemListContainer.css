@@ -2,8 +2,8 @@
     text-align: center;
     margin: 30px auto;
     font-family: sans-serif;
-    max-width: 85%;
-    min-height: 70vh;
+    max-width: 90%;
+    min-height: 72vh;
 }
 
 .ordenCompra{
@@ -22,5 +22,11 @@
 }
 
 .titulo{
-    font-size: 60px
+    font-size: 60px;
+}
+
+@media screen and (max-width: 415px){
+    .titulo{
+        font-size: 50px;
+    }
 }

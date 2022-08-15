@@ -12,7 +12,7 @@
     box-shadow: 0 5px 15px #e07924;
     margin: 0 auto;
     margin-top: 15%;
-    padding: 5px;    
+    padding: 0 5px;    
 }
 
 .mensajeCarritoVacio{
@@ -21,74 +21,162 @@
 }
 
 .cartContenedor{
+   display: block;
    padding-top: 5%; 
-   width: 75%;
+   max-width: 100%;
    margin: 0 auto;
-   min-height: 76vh;
+   min-height: 80vh;
+   padding: 0 3%;
+}
+
+.carrritoCart{
+    text-align: center;
+    padding: 15px;
+}
+
+.cartaCart{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #e07924;
+    box-shadow: 0 5px 15px #e07924;
+    width: 200px;
 }
 
 .carrito{
     max-width: 550px;
-    min-height: 50vh;
+    min-height: 60vh;
     margin: 0 auto;
 }
 
 .cartTotal{
-    font-size: 50px;
+    font-size: 30px;
     margin: auto;
     margin-bottom: 10px;
+    margin-top: 10px;
     text-align: center;
 }
 
 .total{
-    display: inline-flex;
-    margin: 20px 0;
-    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .finalDeCompra{
-    display: flex;
     margin: 0 auto;
-    align-items: center;
-    justify-content: space-evenly;
+}
+
+ .vaciarCarrito,
+ .seguirComprando, 
+ .realizarCompra{
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #e07924; 
+    color: white;
+    background-color:#e07924;;
+    box-shadow: 0 5px 15px #e07924;
+    padding: 5px;
+    cursor: pointer;  
+    margin: 10px 1px;
+    width: 177px;
+}
+
+.seguirComprandoLink, 
+.realizarCompraLink{
+    color: white;
+}
+
+
+@media screen and (max-width: 1100px){
+    .mensajeCartVacio{
+       margin-top: 17%;
+    }
  }
+ @media screen and (max-width: 950px){
+    .mensajeCartVacio{
+       margin-top: 20%;
+    }
+ }
+ @media screen and (max-width: 700px){
+    .mensajeCartVacio{
+       margin-top: 30%;
+    }
+ }
+@media screen and (max-width: 575px){
+    .vaciarCarrito,
+    .seguirComprando, 
+    .realizarCompra{
+       width: 100%;
+       margin: 10px 0;
+    }
+    
+    .mensajeCartVacio{
+        margin-top: 35%;
+        max-width: 330px;
+        max-height: 210px;
+     }
 
- .vaciarCarrito{
-    font-size: 16px;
-    text-align: center;
-    width: 150px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.5); 
-    color: white;
-    background-color:#e07924;;
-    box-shadow: 0 5px 15px #e07924;
-    padding: 5px 0;
-    cursor: pointer;
+    .cartItem {
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas:
+        "menuCart menuCart"
+        "menuDescripcion menuItem"
+        "delete delete"
+        ;
+    }
+
+    .menuCart {
+        grid-area: menuCart;
+        margin: 0 auto;
+        width: 100px;
+        height: 75px;
+    }
+    .menuDescripcion{
+        grid-area: menuDescripcion;
+        margin: 0;
+        padding: 0;
+        height: 72px;
+        width: 70px;
+    }
+    .menuItem{
+        grid-area: menuItem;
+        margin: 0;
+        padding: 0;
+        height: 72px;
+        text-align: right;
+    }
+    .delete{
+        grid-area: delete;
+        margin: 0 auto;
+        height: 55px;
+        padding: 0;
+    }
+    .itenCartContenedor{
+        height: 230px;
+        margin-bottom: 15px;        
+    }
+    .cartItem{
+     
+        height: 230px;
+       
+    }
+    .mensajeCarritoVacio{
+        font-size: 40px;
+    }
+    .cartaCart{
+        margin-top: 15px;
+    }
 }
 
-.SeguirComprando{
-    font-size: 16px;
-    text-align: center;
-    width: 150px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.5); 
-    color: white;
-    background-color:#e07924;;
-    box-shadow: 0 5px 15px #e07924;;
-    padding: 5px 0;
-    cursor: pointer;
-    margin: 0 80px;
-}
-
-.finalizarCompra{
-    font-size: 16px;
-    text-align: center;
-    width: 150px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.5); 
-    color: white;
-    background-color:#e07924;;
-    box-shadow: 0 5px 15px #e07924;
-    padding: 5px 0;
-    cursor: pointer;
-}
+@media screen and (max-width: 450px){
+    .mensajeCartVacio{
+       margin-top: 40%;
+    }
+ }

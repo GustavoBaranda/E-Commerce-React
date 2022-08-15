@@ -54,14 +54,14 @@
 }    
 
 .agregarAlCarrito{
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     width: 100%;
     border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.5); 
+    border: 1px solid #e07924; 
     color: white;
-    background-color:#e07924;;
-    box-shadow: 0 5px 15px #e07924;;
+    background-color:#e07924;
+    box-shadow: 0 5px 15px #e07924;
     padding: 5px 0 0;
     cursor: pointer;
     padding: 5px;

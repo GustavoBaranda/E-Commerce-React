@@ -62,7 +62,7 @@ input:focus {
 
 .tiketContenedor{
    display: flex;
-   min-height: 76vh;
+   min-height: 77vh;
 }
 
 .tiket{
@@ -123,4 +123,44 @@ input:focus {
   max-width: 100%;
   margin: 0 auto;
   margin-top: 35px;
+}
+
+@media screen and (max-width: 1100px){
+   .tiket{
+      margin-top: 15%;
+   }
+}
+@media screen and (max-width: 950px){
+   .tiket{
+      margin-top: 20%;
+   }
+}
+@media screen and (max-width: 700px){
+   .tiket{
+      margin-top: 25%;
+   }
+}
+@media screen and (max-width: 550px){
+   .tiket{
+      margin-top: 30%;
+   }
+}
+@media screen and (max-width: 450px){
+   .tiket{
+      margin-top: 35%;
+      max-width: 340px;
+      max-height: 270px;
+
+   }
+   .tiketTitulo,
+   .tiketTituloBar{
+      font-size: 20px
+   }
+   .tiketCliente{
+      font-size: 16px;
+   }
+   .compra, .TiketId, .mail{
+      font-size: 14px;
+   }
+
 }

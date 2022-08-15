@@ -8,17 +8,6 @@ import './Footer.css'
 function Footer() {
     return (
       <footer className="footerContainer">
-        <div className="footer">
-            <a href="" className="text">
-                ¿Quienes somos?
-            </a>
-            <a href=""className="text">
-                Contacto
-            </a>
-            <a href="" className="text">
-                Trabaja con Nosotros
-            </a>
-        </div>
         <div className="icon">
                 <a href="https://github.com/GustavoBaranda" target="blank">
                     <FaGithubSquare />
@@ -34,7 +23,8 @@ function Footer() {
                 </a>
         </div>
         <div>
-            <p className="text">Copyright © 2022 - All right reserved by Rodolfo's Beer&Burger</p>
+            <p className="text">Copyright © 2022 - All right reserved</p>
+            <p className="text">by Rodolfo's Beer&Burger</p>
         </div>
         <div>
             <p  className="text">Gustavo Baranda Front-End Developer</p>
