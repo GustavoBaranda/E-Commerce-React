@@ -56,7 +56,8 @@ Luego continuar con el paso 3 de la otra forma
 
 El mismo proyecto fue desplegado en Vercel para que lo navegar.</br>
 https://rodolfosbeerandburguer.vercel.app/
+La pagina esta adaptada para que se visualice correctamente en todos los dispositivos.
 
 
 ## VIDEO
-Hacé click [ACA](https://youtu.be/OkyKGlzTfsc) para ver un video de demostración del proceso de compra de la app.
+Hacé click [ACA](https://youtu.be/Ub6jB5MU9XM) para ver un video de demostración del proceso de compra de la app.
