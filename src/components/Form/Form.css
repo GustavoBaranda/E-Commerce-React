@@ -7,7 +7,6 @@
 .formContenedor{
    margin: 0 auto;
    display: flex;
-   background-color: #f1f1f1;
 }
 .form{
    margin: 0 auto;
@@ -19,6 +18,7 @@
    padding: 0 3%;
    background-color: #f1f1f1;
    z-index: 10;
+   margin-bottom: 300px;
 }
 
 .FinalizandoCompra{
