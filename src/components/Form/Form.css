@@ -3,6 +3,7 @@
    height: 70vh;
    display: flex;
    padding: 0 3%;
+   background-color: #f1f1f1;
 }
 .formContenedor{
    margin: 0 auto;
@@ -128,10 +129,6 @@ input:focus {
 @media screen and (max-width: 1100px){
    .tiket{
       margin-top: 15%;
-   }
-   .formContenedorPrincipal{
-      position: absolute;
-      z-index: 10;
    }
 }
 @media screen and (max-width: 950px){
