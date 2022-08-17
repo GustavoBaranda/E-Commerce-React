@@ -94,6 +94,9 @@
 
 
 @media screen and (max-width: 1100px){
+    .cartVacio{   
+        min-height: 85vh;
+    }
     .mensajeCartVacio{
        margin-top: 17%;
     }

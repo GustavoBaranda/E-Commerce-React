@@ -18,7 +18,9 @@ const Navbar = () => {
                 <Link to="/">
                     <GiHamburger />
                 </Link>
-                <p>Rodolfo's Beer&Burger</p>
+                <Link to="/">
+                    <p className="Logo">Rodolfo's Beer&Burger</p>
+                </Link>                
             </div>
             <div className="cartmobile">
                 <Link className="Widget" to="/cart">

@@ -9,7 +9,7 @@ function Widget() {
   return (
    <div className="widget">
       <BsBag />
-      <span className="totalItem"> { totalMenus() || ''}</span>
+      <span className="totalItem"> { totalMenus() || '0'}</span>
     </div>
   );
 }
