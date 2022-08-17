@@ -1,5 +1,4 @@
-import { FaCartArrowDown } from 'react-icons/fa';
-import { FaCartPlus } from 'react-icons/fa';
+import { BsBag } from "react-icons/bs";
 import { useCartContext } from '../../context/Cartcontext'
 import './Widget.css'
 
@@ -9,17 +8,8 @@ function Widget() {
 
   return (
    <div className="widget">
-    
-      { 
-        totalMenus() === 0 ? 
-        ( 
-          <FaCartArrowDown /> 
-        ):(  
-          <FaCartPlus /> 
-        )
-      }
+      <BsBag />
       <span className="totalItem"> { totalMenus() || ''}</span>
-      
     </div>
   );
 }

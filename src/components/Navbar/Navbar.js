@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { GiHamburger } from 'react-icons/gi';
 import Widget from '../Widget/Widget';
 import { Link, NavLink } from 'react-router-dom';
@@ -21,6 +20,11 @@ const Navbar = () => {
                 </Link>
                 <p>Rodolfo's Beer&Burger</p>
             </div>
+            <div className="cartmobile">
+                <Link className="Widget" to="/cart">
+                    <Widget />
+                </Link> 
+            </div>            
             <ul className={ isMobile ? "nav-links-mobile" : "nav-links" }
             onClick={() => setIsMobile(false)}
             >
@@ -39,9 +43,12 @@ const Navbar = () => {
                 <NavLink className="NavLink" to="/categoria/postres">
                     <li>POSTRES</li>                                       
                 </NavLink>
-                <Link className="Widget" to="/cart">
-                    <Widget />
-                 </Link>                
+                <div className="cartdesk">
+                    <Link className="Widget" to="/cart">
+                        <Widget />
+                    </Link> 
+                </div>
+                 
             </ul>
             
             <button className="mobile-menu-icon"
