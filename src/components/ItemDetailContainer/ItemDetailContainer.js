@@ -15,7 +15,7 @@ function ItemDetailContainer (){
         getDoc(queryDoc)
         .then(res => setMenu({ id: res.id, ...res.data() }));
         setLoading(false);
-    }, [])
+    }, [iditem])
 
 
     return(  

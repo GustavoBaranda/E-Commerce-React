@@ -5,7 +5,7 @@ function ItemCount ( {initial, stock, onAdd } ){
     const [num, setNum] = useState( initial );
 
     const sumar = () => {
-        if(stock > 0 && stock !== NaN ){
+        if(stock > 0 && !isNaN(stock)){
       setNum( num + 1 );
     }
     }
