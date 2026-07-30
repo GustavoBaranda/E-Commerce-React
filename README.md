@@ -13,7 +13,7 @@
 > 🌐 **Demo en vivo:** [rodolfosbeerandburguer.vercel.app](https://rodolfosbeerandburguer.vercel.app/)
 
 ---
-
+ 
 ## 📖 Sobre el Proyecto
 
 **Rodolfo's Beer & Burger** es una plataforma e-commerce desarrollada con **ReactJS** e integrada en tiempo real con **Firebase Firestore**. 
