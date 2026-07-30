@@ -1,63 +1,87 @@
-# Rodolfo's Beer&Burger
+# 🍔 Rodolfo's Beer & Burger — E-Commerce React
 
-## Descripción
-
-`Proyecto Final` para el curso de ReactJS de  `Coder House` (2022). </br>
-La aplicación permite conectarse con una base de datos de `Firebase`.</br>
-Permite seleccionar ciertos productos, visualizar los detalles de los mismos, agregarlos al carrito,</br>
-solicitar datos de los cliente, simular la compra de los productos y descontar el stock en la base de datos. 
-Al clickear sobre el botón "realizar compra", pide llenar un formulario con datos básicos y luego de confirmar</br>
-se genera un id de orden de compra en firebase donde se guarda con los datos del cliente con los productos que compró.
-
-**Tecnologías y librerías:**
-<p style="display: flex;  ">
-<img height="20" alt="REACT" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png">
-<img height="20" alt="CSS" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png">
-<img height="20" alt="HTML" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png">
-<img height="20" alt="JS" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
-<img height="20" alt="FIREBASE" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png">
+<p>
+  <img align="left" src="https://img.shields.io/badge/React-18.0.0-61DAFB?style=flat&logo=react&logoColor=black" alt="React" />
+  <img align="left" src="https://img.shields.io/badge/Firebase-9.0.0-FFCA28?style=flat&logo=firebase&logoColor=black" alt="Firebase" />
+  <img align="left" src="https://img.shields.io/badge/Vercel-Deployed-000000?style=flat&logo=vercel&logoColor=white" alt="Vercel" />
+  <img align="left" src="https://img.shields.io/badge/Coderhouse-Proyecto%20Final-FF4655?style=flat" alt="Coderhouse" />
 </p>
-- Interfaz realizada con **ReactJS - Create React App**</br>
-- Estilos con **CSS Puro**</br>
-- Ruteo con **React Router Dom**</br>
-- Backend con **Firebase**
+<br clear="all">
 
-## Descargar y correr el proyecto
+> **Proyecto Final — Curso de ReactJS**  
+> **Coderhouse (2022)**  
+> 🌐 **Demo en vivo:** [rodolfosbeerandburguer.vercel.app](https://rodolfosbeerandburguer.vercel.app/)
 
-### Instalación 🔧
+---
 
-Para descargar el proyecto pueden descargar el repositorio en formato zip_
+## 📖 Sobre el Proyecto
 
-1 - Ir a "Code" -> "Dowload Zip"
+**Rodolfo's Beer & Burger** es una plataforma e-commerce desarrollada con **ReactJS** e integrada en tiempo real con **Firebase Firestore**. 
 
-2 - Descomprimir el archivo
+Permite a los usuarios navegar por el catálogo de hamburguesas y cervezas artesanales, ver el detalle de cada producto, gestionar el carrito de compras con control de cantidad y stock, y completar el checkout registrando la orden de compra en la base de datos.
 
-3 - En la carpeta donde se encuentra en "package.json" ejecutar en una terminal:
+---
 
-### `npm install`
+## ✨ Características Principales
 
-4 - Una vez finalizado, ejecutar:
+- 🍺 **Catálogo Dinámico:** Productos cargados desde Firebase Firestore organizados por categorías.
+- 🔍 **Vista de Detalle (`ItemDetailContainer`):** Descripción, precio, imagen y contador de cantidad (`ItemCount`).
+- 🛒 **Carrito de Compras (`Cart`):** Context API (`CartContext`) para estado global, cálculo automático del total, resumen de ítems y opción para eliminar productos.
+- 📝 **Generación de Orden de Compra:** Formulario de datos del comprador con validación.
+- 📦 **Descuento de Stock Automático:** Actualización en tiempo real de la colección de productos en Firestore al realizar la compra.
+- 🔑 **ID de Confirmación:** Generación de ID de seguimiento de la orden guardada en la base de datos.
 
-### `npm start`
+---
 
-Se abre una pestaña del navegador en el puerto 3000:
+## 🛠️ Stack Tecnológico
 
-### Sino copiar esta URL y pegarla en el navegador: `http://localhost:3000`
+<p align="left">
+  <img align="left" src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" alt="React" />
+  <img align="left" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img align="left" src="https://img.shields.io/badge/Firebase_Firestore-FFCA28?style=flat&logo=firebase&logoColor=black" alt="Firebase Firestore" />
+  <img align="left" src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3" />
+  <img align="left" src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5" />
+  <img align="left" src="https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white" alt="Vercel" />
+</p>
+<br clear="all">
 
-### Instalación con git clone🔧
+---
 
-Se puede clonar el repositorio, ingresando a una terminal y ejecutando:
+## 🚀 Instalación y Uso Local
 
-https://github.com/GustavoBaranda/React.git
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/GustavoBaranda/E-Commerce-React.git
+cd E-Commerce-React
 
-Luego continuar con el paso 3 de la otra forma
+# 2. Instalar dependencias
+npm install
 
-## Despliegue 📦
+# 3. Iniciar el servidor de desarrollo
+npm start
+```
 
-El mismo proyecto fue desplegado en Vercel para que lo navegar.</br>
-https://rodolfosbeerandburguer.vercel.app/
-La pagina esta adaptada para que se visualice correctamente en todos los dispositivos.
+---
 
+## 🎓 Contexto Académico
 
-## VIDEO
-Hacé click [ACA](https://youtu.be/Ub6jB5MU9XM) para ver un video de demostración del proceso de compra de la app.
+| | |
+|---|---|
+| **Institución** | [Coderhouse](https://www.coderhouse.com/) |
+| **Curso** | ReactJS |
+| **Entrega** | Proyecto Final |
+| **Autor** | Gustavo Baranda |
+
+---
+
+## 👤 Autor
+
+**Gustavo Baranda**
+
+[![GitHub](https://img.shields.io/badge/GitHub-GustavoBaranda-181717?style=flat&logo=github)](https://github.com/GustavoBaranda)
+
+---
+
+<div align="center">
+  Proyecto Final · <strong>Coderhouse ReactJS</strong>
+</div>
