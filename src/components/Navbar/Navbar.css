@@ -31,37 +31,43 @@
 .nav-links{
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   list-style: none;
-  
 }
 
-.NavLink, li,.Link{
+.NavLink {
   text-decoration: none;
-  font-size: 20px;
-  padding: 5px 02px;
-  margin: 0 10px;
+}
+
+.nav-links li,
+.NavLink li {
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  margin: 0 5px;
   cursor: pointer;
   color: #e07924;
   font-weight: 500;
-  transition: 0.5s all ease;
-  font-size: 1.2rem;
-  border-radius: 10px;
+  transition: 0.3s all ease;
+  border-radius: 5px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .mobile-menu-icon{
   display: none;
+  color: #e07924;
 }
 
 .NavLink li:hover {
   color: #fff;
   background-color: #e07924;
-  transition: 0.5s all ease;
+  transition: 0.3s all ease;
   border-radius: 5px;
 }
 
-.active li{
+.active li {
   max-height: 100%;
   max-width: 100%;
   color: #fff;
@@ -123,15 +129,16 @@
 
   .mobile-menu-icon svg{
     margin: 0;
+    fill: #e07924;
   }
 
-  .navLink, li{
+  .NavLink li {
     color: #e07924;
     text-align: center;
     margin: 0;
-    padding: 30px 0;
+    padding: 25px 0;
     width: 100%;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
   }
 
   .mobile-menu-icon{
@@ -139,11 +146,12 @@
     position: absolute;
     font-size: 30px;
     background-color: #000;
+    color: #e07924;
     border: none;
     outline: none;
     top: 15px;
     right: 25px;
-
+    cursor: pointer;
   }
 
   .Widget{
@@ -151,9 +159,8 @@
   }
 
   .active li{
-    background-color: #000;
+    background-color: #e07924;
     color: #fff;
   }
 
 }
-
